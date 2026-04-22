@@ -7,7 +7,7 @@ Automated test suites for [Swag Labs](https://www.saucedemo.com/) demo applicati
 | Language   | Directory            |
 |------------|----------------------|
 | TypeScript | [`typescript/`](./typescript/) |
-| Python     | `python/` *(planned)*|
-| Java       | `java/` *(planned)*  |
+| Java       | [`java/`](./java/)             |
+| Python     | `python/` *(planned)*          |
 
 See each subdirectory's `README.md` for setup and run instructions.
