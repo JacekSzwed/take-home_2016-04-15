@@ -19,8 +19,8 @@ npm -v
 
 ```
 # Clone the repo and enter the TypeScript project
-git clone https://github.com/JacekSzwed/take-home_2026-04-15.git
-cd take-home_2026-04-15/typescript
+git clone https://github.com/JacekSzwed/take-home_2016-04-15.git
+cd take-home_2016-04-15/typescript
 
 # Install dependencies
 npm install
