@@ -3,3 +3,8 @@ package-lock.json
 test-results/
 playwright-report/
 target/
+.venv/
+__pycache__/
+.pytest_cache/
+axe-reports/
+report.html
