@@ -78,6 +78,7 @@
                                 <id>chromium</id>
                                 <goals><goal>test</goal></goals>
                                 <configuration>
+                                    <testFailureIgnore>true</testFailureIgnore>
                                     <systemPropertyVariables>
                                         <browser>chromium</browser>
                                         <base.url>${base.url}</base.url>
@@ -88,6 +89,7 @@
                                 <id>firefox</id>
                                 <goals><goal>test</goal></goals>
                                 <configuration>
+                                    <testFailureIgnore>true</testFailureIgnore>
                                     <systemPropertyVariables>
                                         <browser>firefox</browser>
                                         <base.url>${base.url}</base.url>

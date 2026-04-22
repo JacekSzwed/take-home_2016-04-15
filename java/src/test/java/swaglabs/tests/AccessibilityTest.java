@@ -8,6 +8,8 @@ import swaglabs.pages.ProductsPage;
 import com.deque.html.axecore.results.AxeResults;
 import com.deque.html.axecore.results.Rule;
 
+import java.util.List;
+
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 

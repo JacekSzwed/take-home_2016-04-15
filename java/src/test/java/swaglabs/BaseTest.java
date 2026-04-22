@@ -3,16 +3,17 @@ package swaglabs;
 import com.microsoft.playwright.*;
 import org.junit.jupiter.api.*;
 
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public abstract class BaseTest {
 
-    static Playwright playwright;
-    static Browser browser;
+    Playwright playwright;
+    Browser browser;
 
     protected BrowserContext context;
     protected Page page;
 
     @BeforeAll
-    static void launchBrowser(TestInfo testInfo) {
+    void launchBrowser() {
         playwright = Playwright.create();
         playwright.selectors().setTestIdAttribute("data-test");
 
@@ -25,7 +26,7 @@ public abstract class BaseTest {
     }
 
     @AfterAll
-    static void closeBrowser() {
+    void closeBrowser() {
         if (browser != null) browser.close();
         if (playwright != null) playwright.close();
     }
@@ -42,7 +43,7 @@ public abstract class BaseTest {
         if (context != null) context.close();
     }
 
-    static String baseUrl() {
+    String baseUrl() {
         String env = System.getenv("BASE_URL");
         if (env != null && !env.isBlank()) return env;
         return System.getProperty("base.url", "https://www.saucedemo.com");

@@ -95,6 +95,8 @@ mvn test "-Dbase.url=http://saucedemo.com/"
 
 **Network interception** - `page.route` blocks image requests, verifying that the inventory page degrades gracefully when assets fail to load.
 
-**Accessibility** - `axe-core-maven-html` (Playwright module) scans login and inventory pages. The `select-name` rule is disabled on the inventory page - this is a known Swag Labs defect (sort dropdown has no accessible label).
+**Accessibility** - `axe-core-maven-html` (Playwright module) scans login and inventory pages for critical violations.
 
 **No `Thread.sleep`** - all waits use Playwright's built-in auto-waiting and `assertThat` assertions with auto-retry.
+
+**Parallel execution** - JUnit 5 parallel mode enabled via `junit-platform.properties`. Test classes run concurrently (`concurrent`), methods within a class run sequentially (`same_thread`). Each class gets its own Browser + BrowserContext, so there's no shared state between parallel classes.
